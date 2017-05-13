@@ -15,13 +15,21 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
+
 [image1]: ./output_images/undistorted_chessboard.jpg =650x450 "Undistorted"
+
 [image2]: ./output_images/undistorted.jpg =650x450 "Undistorted"
+
 [image3]: ./output_images/binary.jpg =650x450 "Binary"
+
 [image4]: ./output_images/warped_binary.jpg =650x450 "Warp"
+
 [image5]: ./output_images/lanes_polynomials.jpg =650x450 "Fit Visual"
+
 [image6]: ./output_images/projected.jpg =650x450 "Output"
+
 [video1]: ./project.mp4 "Video" =650x450
+
 
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
