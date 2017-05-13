@@ -15,21 +15,13 @@ The goals / steps of this project are the following:
 
 [//]: # (Image References)
 
-
-[image1]: ./output_images/undistorted_chessboard.jpg =650x450 "Undistorted"
-
-[image2]: ./output_images/undistorted.jpg =650x450 "Undistorted"
-
-[image3]: ./output_images/binary.jpg =650x450 "Binary"
-
-[image4]: ./output_images/warped_binary.jpg =650x450 "Warp"
-
-[image5]: ./output_images/lanes_polynomials.jpg =650x450 "Fit Visual"
-
-[image6]: ./output_images/projected.jpg =650x450 "Output"
-
-[video1]: ./project.mp4 "Video" =650x450
-
+[image1]: ./output_images/undistorted_chessboard.jpg "Chessboard"
+[image2]: ./output_images/undistorted.jpg "Undistorted"
+[image3]: ./output_images/binary.jpg "Binary"
+[image4]: ./output_images/warped_binary.jpg "Warp"
+[image5]: ./output_images/lanes_polynomials.jpg "Fit Visual"
+[image6]: ./output_images/projected.jpg "Output"
+[video1]: ./project.mp4 "Video"
 
 
 ## [Rubric](https://review.udacity.com/#!/rubrics/571/view) Points
@@ -57,7 +49,7 @@ The starting point is to prepare the object points, which will be the (x, y, z) 
 
 Then, the output `objPoints` and `imagePoints` are used  to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera()` function. This distortion correction is applied to the test image using the `cv2.undistort()` function. An example output is:
 
-![alt text][image1]
+![alt text][image1] <!-- .element height="450" width="650" -->
 
 
 ### Pipeline (single images)
@@ -68,7 +60,7 @@ Then, the output `objPoints` and `imagePoints` are used  to compute the camera c
 The camera calibration and distortion correction step above is applied to one of the test images. Although it is not really clear if the test image is undistorted just by looking at it, it should be correctly undistorted because the same step is applied to it as above:
 
 
-![alt text][image2]
+![alt text][image2] <!-- .element height="450" width="650" -->
 
 
 #### 2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
@@ -82,7 +74,7 @@ For thresholding by color, the undistorted image is converted into HLS color spa
 The lightness channel applied by the Sobel operator and the saturation channel are filtered by thresholds, and then combined. 
 
 
-![alt text][image3]
+![alt text][image3] <!-- .element height="450" width="650" -->
 
 
 #### 3. Describe how (and identify where in your code) you performed a perspective transform and provide an example of a transformed image.
@@ -108,7 +100,7 @@ The `src` and `dst` points are mapped onto a undistorted binary image and its wa
 The inverse perspective matrix `inversePerspective` is also generated here for creating an image of lane boundaries. 
 
 
-![alt text][image4]
+![alt text][image4] <!-- .element height="450" width="650" -->
 
 
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
@@ -128,7 +120,7 @@ In order to avoid accepting anormalies of the frame image, `validated()` and `sm
 `smooth()` is a function to smooth the lane lines by averaging them over consecutive frames. 
 
 
-![alt text][image5]
+![alt text][image5] <!-- .element height="450" width="650" -->
 
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
@@ -150,7 +142,7 @@ The code for this step is contained in the section named "Step 5" of the IPython
 
 See a function called `projectLanes()`. Using the inverse perspective transform matrix `inversePerspective`, `cv2.warpPersvective()` does the inverse transformation. 
 
-![alt text][image6]
+![alt text][image6] <!-- .element height="450" width="650" -->
 
 ---
 
